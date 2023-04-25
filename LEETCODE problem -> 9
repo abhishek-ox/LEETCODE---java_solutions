@@ -1,0 +1,15 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int copy = x,reverse = 0;
+        if(copy<0)
+            return false;
+        else{
+        while(copy!=0){
+            int remainder = copy % 10;
+            reverse = reverse * 10 + remainder;  
+            copy = copy/10;
+        }
+        return reverse == x;
+        }
+    }
+}
